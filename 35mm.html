@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shane Yelicanin</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="shane.css">
+		<style>
+			img{margin-left: 20%;}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="fixed-nav">
+				<li><h3><a href="digital.html">Digital</a></h3></li>
+				<li><h3><a href="disposables.html">Disposables</a></h3></li>
+				<li><h3><a href="35mm.html" class="active">35 MM</a></h3></li>
+				<li><h3><a href="films.html">Short Films</a></h3></li>
+				<li><h3><a href="watchTheGap.html">Watch The Gap</a></h3></li>
+				<li><h3><a href="bio.html">Artist Bio</a></h3></li>
+			</ul>
+			
+			<main>
+				<div style="text-align: center;">
+					<img src="35mm/One.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Two.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Three.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Four.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Five.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Six.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Seven.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Eight.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Nine.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Ten.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="35mm/Eleven.jpg" class="lightbox_trigger">
+					<br><br><br>
+				</div>
+			</main>
+		</div>	
+		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script>
+			jQuery(document).ready(function($){
+				$('.lightbox_trigger').click(function(e){
+					var image_src = $(this).attr("src");
+					if($('#lightbox').length > 0) {
+						$('#content').html('<img src="' + image_src + '" />');
+						$('#lightbox').show();
+					}
+					else{
+						var lightbox =
+						'<div id="lightbox">' + 
+							'<div id="content">' + 
+								'<img src="' + image_src + '" />'
+							'</div>' +	
+						'</div>';
+						$('body').append(lightbox);
+					}
+				});
+				$('#lightbox').live('click', function(){
+					$('#lightbox').hide();
+				});
+			});
+			
+			$(function(){
+				$(window).scroll(function(event) {
+					$("#fixed-nav").css("margin-left", 0-$(document).scrollLeft());
+				});
+			});
+		</script>
+	</body>
+</html>

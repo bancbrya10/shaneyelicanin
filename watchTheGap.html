@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shane Yelicanin</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="shane.css">
+		<style>
+			img{margin-left: 30%;}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="fixed-nav">
+				<li><h3><a href="digital.html">Digital</a></h3></li>
+				<li><h3><a href="disposables.html">Disposables</a></h3></li>
+				<li><h3><a href="35mm.html">35 MM</a></h3></li>
+				<li><h3><a href="films.html">Short Films</a></h3></li>
+				<li><h3><a href="watchTheGap.html" class="active">Watch The Gap</a></h3></li>
+				<li><h3><a href="bio.html">Artist Bio</a></h3></li>
+			</ul>
+			
+				<div style="margin-left: 250px;">
+					<div style="margin-right: 15%;">
+					<p>
+						<i>Watch the Gap</i> is an annual art exhibition held on the Rose Hill campus of Fordham University. 
+						The show, conceived by Shane Yelicanin, functions as a response to a number of hate crimes 
+						which have and continue to occur on campus, while highlighting the socioeconomic divide between 
+						the private university and surrounding Bronx community.<br><br> 
+
+						The inaugural show, curated by Antoinette Legnini and Yelicanin, took place on April 24 of 2016 
+						and featured the work of both student and local artists. All proceeds have, and will continue to, benefit
+						the DreamYard Project, a Bronx based arts organization for children. <br><br>
+					</p>
+					</div>
+				</div>
+				
+				<div style="text-align: center;">
+					<img src="watchTheGap/One.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Two.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Three.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Four.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Five.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Six.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Seven.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Eight.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Nine.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="watchTheGap/Ten.jpg" class="lightbox_trigger">
+					<br><br><br>
+				</div>
+			</main>
+		</div>	
+		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script>
+			jQuery(document).ready(function($){
+				$('.lightbox_trigger').click(function(e){
+					var image_src = $(this).attr("src");
+					if($('#lightbox').length > 0) {
+						$('#content').html('<img src="' + image_src + '" />');
+						$('#lightbox').show();
+					}
+					else{
+						var lightbox =
+						'<div id="lightbox">' + 
+							'<div id="content">' + 
+								'<img src="' + image_src + '" />'
+							'</div>' +	
+						'</div>';
+						$('body').append(lightbox);
+					}
+				});
+				$('#lightbox').live('click', function(){
+					$('#lightbox').hide();
+				});
+			});
+			
+			$(function(){
+				$(window).scroll(function(event) {
+					$("#fixed-nav").css("margin-left", 0-$(document).scrollLeft());
+				});
+			});
+		</script>
+	</body>
+</html>

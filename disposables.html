@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shane Yelicanin</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="shane.css">
+		<style>
+			img{margin-left: 30%;}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="fixed-nav">
+				<li><h3><a href="digital.html">Digital</a></h3></li>
+				<li><h3><a href="disposables.html" class="active">Disposables</a></h3></li>
+				<li><h3><a href="35mm.html">35 MM</a></h3></li>
+				<li><h3><a href="films.html">Short Films</a></h3></li>
+				<li><h3><a href="watchTheGap.html">Watch The Gap</a></h3></li>
+				<li><h3><a href="bio.html">Artist Bio</a></h3></li>
+			</ul>
+			
+				<div style="text-align: center;">
+					<img src="disposables/One.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Two.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Three.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Four.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Five.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Six.jpg" class="lightbox_trigger">
+					<br><br><br>
+					<img src="disposables/Seven.jpg" class="lightbox_trigger">
+					<br><br><br>
+				</div>
+			</main>
+		</div>	
+		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script>
+			jQuery(document).ready(function($){
+				$('.lightbox_trigger').click(function(e){
+					var image_src = $(this).attr("src");
+					if($('#lightbox').length > 0) {
+						$('#content').html('<img src="' + image_src + '" />');
+						$('#lightbox').show();
+					}
+					else{
+						var lightbox =
+						'<div id="lightbox">' + 
+							'<div id="content">' + 
+								'<img src="' + image_src + '" />'
+							'</div>' +	
+						'</div>';
+						$('body').append(lightbox);
+					}
+				});
+				$('#lightbox').live('click', function(){
+					$('#lightbox').hide();
+				});
+			});
+			
+			$(function(){
+				$(window).scroll(function(event) {
+					$("#fixed-nav").css("margin-left", 0-$(document).scrollLeft());
+				});
+			});
+		</script>
+	</body>
+</html>

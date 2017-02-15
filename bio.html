@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shane Yelicanin</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="shane.css">
+		<style>
+			img{width: 400px;
+				margin-left: 35%;}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="fixed-nav">
+				<li><h3><a href="digital.html">Digital</a></h3></li>
+				<li><h3><a href="disposables.html">Disposables</a></h3></li>
+				<li><h3><a href="35mm.html">35 MM</a></h3></li>
+				<li><h3><a href="films.html">Short Films</a></h3></li>
+				<li><h3><a href="watchTheGap.html">Watch The Gap</a></h3></li>
+				<li><h3><a href="bio.html" class="active">Artist Bio</a></h3></li>
+			</ul>
+			
+			<div style="text-align: center">
+				<img src="bio/shane_bio.jpg">
+			</div>
+			
+			<div style="text-align: left">
+				<div style="margin-left: 32%">
+					<p><br><br><b>Name:</b> Shane Yelicanin but more often referred to as “The Shaner”<br><br>
+
+						<b>Age:</b> 23 but self-identifies as 41 <br><br>
+
+						<b>Education:</b> Fordham University; Graduated May 2016  <br><br>
+
+						Bachelor of Arts; Communications and Media Studies, Concentrations in Film and Television <br><br>
+
+						Bachelor of Arts; Anthropology  <br><br>
+
+						<b>Primary Influences:</b> Henri Cartier-Bresson, Vivian Maier, Berenice Abbott<br><br>
+						
+						<b>Contact:</b> 215-704-3589<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;syelicanin@gmail.com
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script>
+			$(function(){
+				$(window).scroll(function(event) {
+					$("#fixed-nav").css("margin-left", 0-$(document).scrollLeft());
+				});
+			});
+		</script>
+	</body>
+</html>

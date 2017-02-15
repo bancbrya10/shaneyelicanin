@@ -1,0 +1,90 @@
+#wrapper{margin: 0 auto;}
+
+body{padding: 50px 0;
+	 margin: 0;}
+
+main{background-color: #FFFFFF;
+	 padding: 0;
+	 overflow: auto;
+	 min-height: 500px;
+	 margin-left: 175px;}
+
+h3{font-family: Helvetica, Arial, sans-serif, Helvetica Neue;}	
+
+p{font-family: Helvetica, Arial, sans-serif, Helvetica Neue;
+  color: #999999;
+  line-height: 200%;}
+				
+#fixed-nav{list-style-type: none;
+		   padding: 0;
+		   margin: 0;
+		   height: 100%;
+		   width: 185px;
+		   overflow: auto;
+		   position: fixed;
+		   background-color: #ffffff;}
+li{padding: 0;
+   margin: 0 auto;}
+li a{text-decoration: none;
+	 padding: 20px;
+	 background-color: #ffffff;
+	 display: block;
+	 color: #c1c1c1;}	  
+li a:hover{color: #ffffff;
+		   background-color: #000000;}
+			
+img{width: 600px;
+	display: block;}			
+			
+.active{color: #000000;}			
+
+#lightbox{position: fixed;
+		  top: 0;
+		  left: 0;
+		  width:100%;
+		  overflow-y: scroll;
+		  height: 100%;
+		  background: rgba(0, 0, 0, .95);}
+					  
+#lightbox img {box-shadow:0 0 25px #111;
+			   -webkit-box-shadow:0 0 25px #111;
+			   -moz-box-shadow:0 0 25px #111;
+			   height: auto;
+			   width: 750px;
+			   margin-bottom: 5%;
+			   margin-top: 5%;
+			   margin-left: auto;
+			   margin-right: auto;
+			   display: block;}
+			   
+.textTall{position: absolute;
+		  left: 30%;
+		  background-color:rgba(255,255,255,0.8);
+		  width: 600px;
+		  height: 800px;
+		  line-height:100px;
+		  text-align: center;
+		  z-index: 10;
+		  opacity: 0;
+		  -webkit-transition: all 0.5s ease;
+		  -moz-transition: all 0.5s ease;
+		  -o-transition: all 0.5s ease;
+		  transition: all 0.5s ease;}
+
+.textTall:hover{opacity: 1;}
+
+.textWide{position: absolute;
+		  left: 30%;
+		  background-color:rgba(255,255,255,0.8);
+		  width: 600px;
+		  height: 450px;
+		  line-height:100px;
+		  text-align: center;
+		  z-index: 10;
+		  opacity: 0;
+		  -webkit-transition: all 0.5s ease;
+		  -moz-transition: all 0.5s ease;
+		  -o-transition: all 0.5s ease;
+		  transition: all 0.5s ease;}
+
+.textWide:hover{opacity: 1;}  
