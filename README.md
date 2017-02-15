@@ -1,1 +1,2 @@
 # shaneyelicanin
+This is a website a photographer friend of mine asked me to code for him. He brought the design specifications to me and I put it together the best I could in my free time between classes. He eventually plans to convert the website/his photography into a shirt design store and intends to have me remain in charge of the website maintenance, so this site is still mostly just a jumping off point or a work in progress at best.
